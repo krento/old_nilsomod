@@ -3,6 +3,7 @@ package com.krento.nilsomod.init;
 import com.krento.nilsomod.NilsoMod;
 import com.krento.nilsomod.NilsoMod.NilsoItemGroup;
 
+import com.krento.nilsomod.objects.items.Amphetamine;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.potion.EffectInstance;
@@ -22,14 +23,7 @@ public class itemInit {
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
 	{
-		event.getRegistry().register(new Item(new Item.Properties()
-				.group(NilsoItemGroup.instanse)
-				.food(new Food.Builder().hunger(20)
-						.saturation(2.1f)
-						.setAlwaysEdible()
-						.effect(()-> new EffectInstance(Effects.HEALTH_BOOST, 180, 50), 1.0f)
-						.effect(()-> new EffectInstance(Effects.SPEED, 6000, 100), 1.0f)
-						.build()))
+		event.getRegistry().register(new Amphetamine()
 				.setRegistryName("ksign"));
 	}	
 }
