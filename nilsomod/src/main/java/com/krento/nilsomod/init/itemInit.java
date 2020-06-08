@@ -23,7 +23,8 @@ public class itemInit {
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
 	{
-		event.getRegistry().register(new Amphetamine()
-				.setRegistryName("ksign"));
+//		event.getRegistry().register(new Amphetamine()
+//				.setRegistryName("ksign"));
+		Amphetamine.register(event);
 	}	
 }

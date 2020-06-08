@@ -10,7 +10,7 @@ import net.minecraftforge.event.RegistryEvent;
 import javax.annotation.Nullable;
 
 public class Amphetamine extends Item {
-    private final String name = "amphetamine";
+    private static final String name = "amphetamine";
     public Amphetamine() {
         super(new Item.Properties()
                 .group(NilsoMod.NilsoItemGroup.instanse)
@@ -21,7 +21,7 @@ public class Amphetamine extends Item {
                         .effect(()-> new EffectInstance(Effects.SPEED, 6000, 100), 1.0f)
                         .build()));
     }
-    public void register(final RegistryEvent.Register<Item> event) {
+    static public void register(final RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new Amphetamine()
                 .setRegistryName(name));
     }
