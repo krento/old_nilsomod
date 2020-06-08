@@ -1,0 +1,35 @@
+modLoader="javafml" #mandatory
+loaderVersion="[31,)" 
+issueTrackerURL="http://my.issue.tracker/" 
+[[mods]]
+modId="nilsomod"
+version="1.0"
+displayName="Nilso Mod" 
+updateJSONURL="http://myurl.me/"
+displayURL="http://example.com"
+logoFile="examplemod.png"
+credits="Kek"
+authors="krento"
+description='''
+	Hello, this is descr =)
+'''
+
+
+
+
+
+
+
+
+[[dependencies.nilsomod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[31,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.nilsomod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
