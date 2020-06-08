@@ -22,6 +22,14 @@ public class itemInit {
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
 	{
-		event.getRegistry().register(new Item(new Item.Properties().group(NilsoItemGroup.instanse).food(new Food.Builder().hunger(20).saturation(2.1f).setAlwaysEdible().effect(new EffectInstance(Effects.HEALTH_BOOST, 180, 50), 1.0f).effect(new EffectInstance(Effects.SPEED, 6000, 100), 1.0f).build())).setRegistryName("ksign"));
+		event.getRegistry().register(new Item(new Item.Properties()
+				.group(NilsoItemGroup.instanse)
+				.food(new Food.Builder().hunger(20)
+						.saturation(2.1f)
+						.setAlwaysEdible()
+						.effect(()-> new EffectInstance(Effects.HEALTH_BOOST, 180, 50), 1.0f)
+						.effect(()-> new EffectInstance(Effects.SPEED, 6000, 100), 1.0f)
+						.build()))
+				.setRegistryName("ksign"));
 	}	
 }
