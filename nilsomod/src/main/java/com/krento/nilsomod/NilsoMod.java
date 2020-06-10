@@ -47,7 +47,7 @@ public class NilsoMod
 
     }
     
-    public static class NilsoItemGroup extends ItemGroup{
+    public static class NilsoItemGroup extends ItemGroup {
     	
     	public static final NilsoItemGroup instanse = new NilsoItemGroup(ItemGroup.GROUPS.length, "NilsoTab");
     	

@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "nilsomod:items/amphetamine"
-  }
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "nilsomod:items/amphetamine"
+    }
 }
