@@ -1,5 +1,13 @@
 package com.krento.nilsomod;
 
+import com.krento.nilsomod.objects.NilsoObject;
+import com.krento.nilsomod.objects.blocks.Cache;
+import com.krento.nilsomod.objects.blocks.NilsoBlock;
+import com.krento.nilsomod.objects.items.Amphetamine;
+import com.krento.nilsomod.objects.items.NilsoItem;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,13 +30,21 @@ public class NilsoMod
 {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "nilsomod";
-    public static NilsoMod instanse;
+    public static NilsoMod instance;
+
+    public static class Items {
+        public static final NilsoItem AMPHETAMINE = new Amphetamine(new Item.Properties());
+    }
+    public static class Blocks {
+        public static final NilsoBlock CACHE = new Cache(Block.Properties.create(Material.CACTUS));
+    }
+
     
     public NilsoMod() {
     	final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
     	modEventBus.addListener(this::setup);
     	modEventBus.addListener(this::doClientStuff);
-        instanse = this;
+        instance = this;
         
         MinecraftForge.EVENT_BUS.register(this);
     }

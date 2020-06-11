@@ -1,12 +1,14 @@
 package com.krento.nilsomod.objects.items;
 
 import com.krento.nilsomod.NilsoMod;
+import com.krento.nilsomod.objects.NilsoObject;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
-public class Amphetamine extends Item {
+public class Amphetamine extends NilsoItem {
     public static final String NAME = "amphetamine";
 
     public static Amphetamine getInstance() {
@@ -27,5 +29,10 @@ public class Amphetamine extends Item {
                         .build()
                 )
         );
+    }
+
+    @Override
+    public String getObjectName() {
+        return NAME;
     }
 }

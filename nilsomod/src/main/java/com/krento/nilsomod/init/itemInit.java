@@ -17,12 +17,9 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod.EventBusSubscriber(modid = NilsoMod.MOD_ID, bus = Bus.MOD)
 @ObjectHolder(NilsoMod.MOD_ID)
 public class itemInit {
-	public static final Item ksign = null;
-	
-	@SuppressWarnings("deprecation")
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
 	{
-		event.getRegistry().register(Amphetamine.getInstance().setRegistryName(Amphetamine.NAME));
+		event.getRegistry().register(NilsoMod.Items.AMPHETAMINE.setRegistryName(NilsoMod.Items.AMPHETAMINE.getObjectName()));
 	}	
 }
