@@ -27,6 +27,8 @@ public class DropProcessor {
     private void getDrops(World worldIn, BlockPos pos, ArrayList<Entity> drops) {
         drops.add(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(),
                 new ItemStack(NilsoMod.Items.AMPHETAMINE, 2)));
+        drops.add(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(),
+                new ItemStack(NilsoMod.Items.COCAINE, 1)));
     }
     private void spawnDrops(World worldIn, ArrayList<Entity> drops) {
         for (final Entity e : drops) {

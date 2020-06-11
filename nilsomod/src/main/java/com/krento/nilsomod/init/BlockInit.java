@@ -31,10 +31,10 @@ public class BlockInit {
 	@SubscribeEvent
 	public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(new BlockItem(kblock, new Item.Properties().maxStackSize(3).group(NilsoItemGroup.instanse)).setRegistryName("kblock"));
-		event.getRegistry().register(
-				new BlockItem(NilsoMod.Blocks.CACHE,
-						new Item.Properties().maxStackSize(3).group(NilsoItemGroup.instanse))
-						.setRegistryName(NilsoMod.Blocks.CACHE.getObjectName()));
-//		event.getRegistry().register(new BlockItem(kblock, new Item.Properties().maxStackSize(3).group(NilsoItemGroup.instanse)).setRegistryName("cache"));
+		event.getRegistry().register(new BlockItem(NilsoMod.Blocks.CACHE,
+				new Item.Properties()
+						.maxStackSize(3)
+						.group(NilsoItemGroup.instanse))
+				.setRegistryName(NilsoMod.Blocks.CACHE.getObjectName()));
 	}
 }

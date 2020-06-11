@@ -21,5 +21,6 @@ public class itemInit {
 	public static void registerItems(final RegistryEvent.Register<Item> event)
 	{
 		event.getRegistry().register(NilsoMod.Items.AMPHETAMINE.setRegistryName(NilsoMod.Items.AMPHETAMINE.getObjectName()));
+		event.getRegistry().register(NilsoMod.Items.COCAINE.setRegistryName(NilsoMod.Items.COCAINE.getObjectName()));
 	}	
 }

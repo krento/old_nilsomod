@@ -1,18 +1,14 @@
 package com.krento.nilsomod;
 
-import com.krento.nilsomod.objects.NilsoObject;
+import com.krento.nilsomod.init.BlockInit;
 import com.krento.nilsomod.objects.blocks.Cache;
 import com.krento.nilsomod.objects.blocks.NilsoBlock;
 import com.krento.nilsomod.objects.items.Amphetamine;
+import com.krento.nilsomod.objects.items.Cocaine;
 import com.krento.nilsomod.objects.items.NilsoItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.krento.nilsomod.init.BlockInit;
-
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -23,6 +19,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 @Mod("nilsomod")
@@ -34,6 +32,7 @@ public class NilsoMod
 
     public static class Items {
         public static final NilsoItem AMPHETAMINE = new Amphetamine(new Item.Properties());
+        public static final NilsoItem COCAINE = new Cocaine(new Item.Properties());
     }
     public static class Blocks {
         public static final NilsoBlock CACHE = new Cache(Block.Properties.create(Material.CACTUS));
@@ -49,9 +48,7 @@ public class NilsoMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-
+    private void setup(final FMLCommonSetupEvent event) {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -60,11 +57,9 @@ public class NilsoMod
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
-
     }
     
     public static class NilsoItemGroup extends ItemGroup {
-    	
     	public static final NilsoItemGroup instanse = new NilsoItemGroup(ItemGroup.GROUPS.length, "NilsoTab");
     	
     	private NilsoItemGroup(int index, String label) {
@@ -77,5 +72,4 @@ public class NilsoMod
     	}
     	
     }
-
 }
